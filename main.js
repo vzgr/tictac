@@ -17,7 +17,7 @@ function game(){
 		if(isWin(ai,newGround)) return 1;
 		if(freeCells.length === 0) return 0;
 
-		let findedIndex;
+		let foundIndex;
 		let solve = 2;
 		if(turn === ai) solve = -2;
 
@@ -34,12 +34,12 @@ function game(){
 			if(turn === ai){
 				if(choice > solve){
 					solve = choice;
-					findedIndex = freeCells[i];
+					foundIndex = freeCells[i];
 				}
 			} else if(choice < solve) solve = choice;
 		}
 
-		placeIndex = findedIndex;
+		placeIndex = foundIndex;
 		return solve;
 	}
 
@@ -102,10 +102,10 @@ function game(){
 
 
 const colors = {'X':'red','O':'blue'};
-var playerTurn = false;
-var placeIndex;
-var player = 'O';
-var ai = 'X';
+let playerTurn = false;
+let placeIndex;
+let player = 'O';
+let ai = 'X';
 
 const choice = document.getElementById('choice');
 const buttons = document.getElementsByTagName('button');
