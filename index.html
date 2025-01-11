@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Крестики Нолики</title>
+	</head>
+	<body>
+		<table id="ground">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<div id="choice">
+			<h1>Выберите сторону</h1>
+			<div><button class="red">X</button><button class="blue">O</button></div>
+		</div>
+		<div id="over" style="display: none;">
+			<h1 id="over-text"></h1>
+			<button id="go-button">ещё раз</button>
+		</div>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	user-select: none;
+}
+
+table{
+	border-spacing: .7rem;	
+	margin: auto;
+	margin-top: 10rem;
+}
+
+td{	
+	background: #00000030;
+	border-radius: .7rem;
+	width: 5rem;
+	height: 5rem;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 900;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#choice, #over{
+	text-align: center;
+	display: block;
+	margin: auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+button{
+	font-size: 2rem;
+	color: white;
+	margin: 0.7rem;
+	padding: 0.7rem;
+	width: 7rem;
+	border: none;
+	border-radius: 1rem;
+	font-weight: 900;
+}
+.red{
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+}
+#go-button{
+	width: 15rem;
+	background-color: green;
+}
+</style>
+<script type="text/javascript" src="./main.js"></script>
+	</body>
+</html>
